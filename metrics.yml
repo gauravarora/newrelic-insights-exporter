@@ -1,0 +1,4 @@
+metrics:
+  - name: operator_mtn_total
+    nrql: SELECT uniqueCount(order_number) FROM ServiceAggregator WHERE service_status != 'SA200' and updated_by!='IQ_CRON' AND vendor = 'MTN' SINCE 60 minutes ago
+    type: gauge
